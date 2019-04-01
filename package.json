@@ -1,0 +1,15 @@
+{
+  "name": "vtcodecamp-11ty-test",
+  "version": "1.0.0",
+  "description": "VT Code Camp Eleventy Test Project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

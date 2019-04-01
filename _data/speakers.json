@@ -1,0 +1,26 @@
+{
+    "josh-lee": {
+        "code": "josh-lee",
+        "firstname": "Josh",
+        "lastname": "Lee",
+        "bio": "With over 15 years of web industry experience, Josh Lee is an expert in Content Management, ecommerce, and SaaS platforms. He is passionate about making the web and web development skills more universally accessible. Josh is a consultant and also the organizer for the Burlington WordPress meetup.",
+        "twitter": "joshleecreates",
+        "sessions": [ "a-developers-guide-to-wordpress" ]   
+    },
+    "kendra-goudreau": {
+        "code": "kendra-goudreau",
+        "firstname": "Kendra",
+        "lastname": "Goudreau",
+        "bio": "Kendra Goudreau currently works at GLOBALFOUNDRIES (formally IBM Microelectronics) in information technology supporting supply chain IT applications. She has held various leadership positions in her local Society of Women Engineers (SWE) section and established the women's group at her company's Vermont location. Her previous roles include semiconductor manufacturing engineer and client-facing engineer. Kendra graduated from the University of New Hampshire with a degree in electrical engineering.",
+        "twitter": "kkgoudreau",
+        "sessions": [ "adopt-an-active-office-lifestyle" ]
+    },
+    "iris-galvez": {
+        "code": "iris-galvez",
+        "firstname": "Iris",
+        "lastname": "Galvez",
+        "bio": "Iris Galvez holds a BS in Chemical Engineering from the University of Puerto Rico, Mayaguez, and a MS in Chemical engineering from Michigan State University. She has worked in the Semiconductor industry for 11+ years in companies like IBM, Motorola, Intel and most recently, GLOBALFOUNDRIES. In addition to being an engineer, Iris is a licensed Zumba instructor teaching 3 classes a week. Outside of work Iris enjoys traveling, baking and spending time with family.",
+        "twitter": "",
+        "sessions": [ "adopt-an-active-office-lifestyle" ]
+    }
+}
