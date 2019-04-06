@@ -22,5 +22,22 @@
         "bio": "Iris Galvez holds a BS in Chemical Engineering from the University of Puerto Rico, Mayaguez, and a MS in Chemical engineering from Michigan State University. She has worked in the Semiconductor industry for 11+ years in companies like IBM, Motorola, Intel and most recently, GLOBALFOUNDRIES. In addition to being an engineer, Iris is a licensed Zumba instructor teaching 3 classes a week. Outside of work Iris enjoys traveling, baking and spending time with family.",
         "twitter": "",
         "sessions": [ "adopt-an-active-office-lifestyle" ]
+    },
+    "peter-vile": {
+        "code": "peter-vile",
+        "firstname": "Peter",
+        "lastname": "Vile",
+        "bio": "Peter Vile received his master degree from Colorado State University in computer science with a focus on software engineering specializing in distributed systems and aspect oriented middleware. Since then he has been developing web based solutions and services in the Java ecosystem in several domains such as defense, telecom and now automotive. Currently he works for Dealer.com focused on internal and external integration projects. While not chasing his two boys around he tries to stay up on messaging and reactive systems and is currently dabbling in Scala, Play and Akka.",
+        "twitter": "twinsenf1",
+        "sessions": [ "working-towards-active-active-systems" ]
+    },
+    "pj-hagerty": {
+        "code": "pj-hagerty",
+        "firstname": "PJ",
+        "lastname": "Hagerty",
+        "bio": "Developer, writer, speaker, musician, and Developer Advocate at Logz.io, PJ is known to travel the world speaking about programming and the way people think and interact. He is also known for wearing hats.",
+        "twitter": "aspleenic",
+        "sessions": [ "urban-legends" ]
     }
 }
+
