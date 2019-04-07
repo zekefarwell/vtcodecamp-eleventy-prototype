@@ -33,7 +33,9 @@ class Schedule
         for (let [timeCode, rowSessions] of Object.entries(schedule)) {
             let time = data.times[timeCode];
             tableContent += "<tr>";
-            tableContent += `<th> ${time.start} - ${time.end} </th>`;
+            let startTime = this.getTimeString(time.start);
+            let endTime = this.getTimeString(time.end);
+            tableContent += `<th> ${startTime} - ${endTime} </th>`;
             for (let session of Object.values(rowSessions)) {
                 tableContent += "<td>";
                 tableContent += `<a href="#" class="td-title">${session.title}<a>`;
@@ -62,6 +64,17 @@ class Schedule
             schedule[time][space] = session;
         }
         return schedule;
+    }
+
+    getTimeString(timeString)
+    {
+        let date = new Date(timeString);
+        let time = date.toLocaleTimeString('en-US', {
+            hour12: true,
+            hour: 'numeric',
+            minute: 'numeric',
+        })
+        return time;
     }
 
     renderHeader(row)
