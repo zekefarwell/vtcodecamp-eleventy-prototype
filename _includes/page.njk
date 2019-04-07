@@ -28,13 +28,26 @@
         .td-subtitle {
             font-size: smaller;
         }
+        .home-link, .menu {
+            font-size: larger;
+        }
+        .menu li {
+            line-height: 2rem;
+        }
 
     </style>
 </head>
 
 <body>
 
-{{ content | safe }}
+
+    <h1>{{title}}</h1>
+
+    <div>
+        <a class="home-link" href="/">Home</a>
+    </div> 
+
+    {{ content | safe }}
 
 </body>
 

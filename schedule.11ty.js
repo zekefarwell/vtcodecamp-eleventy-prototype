@@ -40,8 +40,11 @@ class Schedule
             tableContent += `<th> ${startTime} - ${endTime} </th>`;
             for (let session of Object.values(rowSessions)) {
                 tableContent += "<td>";
-                tableContent += `<a href="#" class="td-title">${session.title}<a>`;
-                tableContent += `<a href="#" class="td-subtitle">${session.speakers[0]}<a>`;
+                tableContent += `<a href="/sessions/#${session.code}" class="td-title">${session.title}<a>`;
+                for (let speakerCode of session.speakers) {
+                    let speaker = data.speakers[speakerCode];
+                    tableContent += `<a href="/speakers/#${speaker.code}" class="td-subtitle">${speaker.firstname} ${speaker.lastname}<a>`;
+                }
                 tableContent += "</td>";
             }
             tableContent += "</tr>";

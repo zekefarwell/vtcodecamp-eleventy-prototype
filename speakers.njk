@@ -1,0 +1,28 @@
+---
+layout: page.njk
+title:  "Speakers"
+---
+
+{% for speakerCode, speaker in speakers %} 
+
+    <h3 id="{{speakerCode}}"> {{speaker.firstname}} {{speaker.lastname}} </h3>
+    
+    <p> {{speaker.bio}} </p>
+
+    <h4> {{speaker.firstname}}'s Sessions </h4>
+
+    <ul>
+    
+    {% for sessionCode in speaker.sessions %}
+
+        <li>
+            <a href="/sessions/#{{sessionCode}}">{{ sessions[sessionCode].title }} </a>
+            (track: {{ sessions[sessionCode].track }})
+        </li>
+
+    {% endfor %}
+
+    </ul>
+
+
+{% endfor %}
