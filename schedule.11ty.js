@@ -17,18 +17,20 @@ class Schedule
 
         // return "<pre>" + JSON.stringify(schedule) + "</pre>";
 
-        let tableContent = "<table>"; 
-
-        // tableContent = `
-        //     <thead>
-        //         <tr>
-        //             <th>Time</th>
-        //             <th>${firstRowData.}</th>
-        //         </tr>
-        //     </thead>
-
-        // `;
-
+        let tableContent = ""; 
+        tableContent += "<table>"; 
+        tableContent += "<thead><tr>"; 
+        tableContent += "<th><div class='td-title'>Time</div></th>";
+        let firstRow = Object.values(schedule)[0];
+        for (let session of Object.values(firstRow)) {
+            let track = data.tracks[session.track];
+            let space = data.spaces[track.space];
+            tableContent += "<th>";
+            tableContent += `<div class='td-title'>${track.title}</div>`
+            tableContent += `<div class='td-subtitle'>${space.title}</div>`
+            tableContent += "</th>";
+        }
+        tableContent += "</tr></thead>"; 
         tableContent += "<tbody>"; 
         for (let [timeCode, rowSessions] of Object.entries(schedule)) {
             let time = data.times[timeCode];
