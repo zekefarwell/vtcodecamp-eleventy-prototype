@@ -79,18 +79,6 @@ class Schedule
         return time;
     }
 
-    renderHeader(row)
-    {
-        header = `
-            <thead> 
-                <tr>
-                    <th></th>
-                </tr>
-            </thead>
-        `
-
-        return row;
-    }
 
 }
 
