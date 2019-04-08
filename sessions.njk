@@ -3,18 +3,31 @@ layout: page.njk
 title:  "Sessions"
 ---
 
-{% for sessionCode, session in sessions %} 
 
-    <h3 id="{{sessionCode}}"> {{session.title}} </h3>
-    
-    <h4> 
-    {% for speakerCode in session.speakers %}
-        {% set speaker = speakers[speakerCode] %}
-        <a href="/speakers/#{{speakerCode}}">{{speaker.firstname}} {{speaker.lastname}}</a>,
+{% for trackCode, trackSessions in sessionsByTrack %}
+
+    {% set track = tracks[trackCode] %}
+    {% set space = spaces[track.space] %}
+
+    <h2> 
+        {{track.title}}
+        <span> ({{space.title}})  </span>
+    </h2>
+
+    {% for session in trackSessions %} 
+
+        <h3 id="{{session.code}}"> {{session.title}} </h3>
+        
+        <h4> 
+        {% for speakerCode in session.speakers %}
+            {% set speaker = speakers[speakerCode] %}
+            <a href="/speakers/#{{speakerCode}}">{{speaker.firstname}} {{speaker.lastname}}</a>,
+        {% endfor %}
+        </h4>
+
+        <p> {{session.description}} </p>
+
+
     {% endfor %}
-    </h4>
-
-    <p> {{session.description}} </p>
-
 
 {% endfor %}
