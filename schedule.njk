@@ -1,0 +1,47 @@
+---
+layout: "page.njk"
+title: "Schedule"
+---
+
+<table>
+
+    <thead>
+        <tr>
+
+        {% for cell in schedule.head %}
+            <th>
+                <div class='td-title'>{{cell.title}}</div>
+                <div class='td-subtitle'>{{cell.subtitle}}</div>
+            </th>
+        {% endfor %}
+
+        </tr>
+    </thead>
+    <tbody>
+
+    {% for row in schedule.body %}
+        <tr>
+
+        {% for cell in row %}   
+            <td>
+
+            {% if cell.type == "session" %}
+                <a class='td-title' href="{{cell.title_link}}">{{cell.title}}</a>
+
+                {% for speaker in cell.speakers %}
+                    <a class='td-subtitle' href="{{speaker.link}}">{{speaker.name}}</div>
+                {% endfor %}
+
+            {% else %}
+                <div class='td-title'>{{cell.title}}</div>
+                <div class='td-subtitle'>{{cell.subtitle}}</div>
+            {% endif %}
+
+            </td>
+        {% endfor %} 
+
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
