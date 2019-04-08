@@ -6,7 +6,13 @@ title:  "Speakers"
 {% for speakerCode, speaker in speakers %} 
 
     <h3 id="{{speakerCode}}"> {{speaker.firstname}} {{speaker.lastname}} </h3>
-    
+
+    {% if speaker.twitter %}
+        <a href="https://www.twitter.com/{{speaker.twitter}}">
+            @{{speaker.twitter}}
+        </a>
+    {% endif %}
+
     <p> {{speaker.bio}} </p>
 
     <h4> {{speaker.firstname}}'s Sessions </h4>
@@ -17,7 +23,6 @@ title:  "Speakers"
 
         <li>
             <a href="/sessions/#{{sessionCode}}">{{ sessions[sessionCode].title }} </a>
-            (track: {{ sessions[sessionCode].track }})
         </li>
 
     {% endfor %}
